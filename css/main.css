@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Bad Script';
+    src: url('../font/Badscriptregular.woff2') format('woff2'), 
+    		 url('../font/Badscriptregular.woff') format('woff'), 
+    		 url('../font/Badscriptregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+body {
+	height: 100%;
+}
+
+#bg {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-image: url('../img/bg_5.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.menu_button_show {
+	position: fixed;
+	z-index: 1;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	top: -25px;
+	left: -25px;
+	display: none;
+}
+
+.avatar {
+	background-image: url(../img/avatar/1.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.menu_button_show:hover {
+	width: 70px;
+	height: 70px;
+	border: 2px solid #ef9985;
+}
+
+/*SideBar*/
+
+.sidebar {		
+	position: fixed;	
+	width: 25%;
+	min-width: 250px;		
+	height: 100%;
+	float: left;
+	background-color: rgba(0, 0, 0, 0.7);	
+	transition: left 0.5s ease-out 0.5s;
+}
+
+.sb_Head {
+	margin-top: calc(100vh * 0.10);
+	width: calc(100% - 40px);
+	height: 220px;
+	padding: 20px;
+}
+
+.avatar_Block {
+	width: calc(100vh*0.20);
+	height: calc(100vh*0.20);
+	margin: 0 auto;
+	border: 2px solid #fff;
+	border-radius: 50%;
+}
+
+.name {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	font-family: 'Bad Script';
+	font-size: calc(100vh*0.035);	
+}
+
+.name > a {
+	color: #fff;
+}
+
+/*Content*/
+
+.content {
+	width: 70%;
+	min-height: 100vh;
+	float: right;
+	margin-right: 2.5%;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+/*Media Query*/
+
+@media (max-width: 1000px) {
+		.sidebar {
+			width: 100%;
+			left: -100%;			
+		}		
+		.sidebar.active {
+			left: 0;
+		}
+		.content {
+			width: 95%;
+			margin-left: 2.5%;
+		}
+		.menu_button_show {
+			display: block;
+		}
+}
