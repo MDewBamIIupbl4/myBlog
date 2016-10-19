@@ -7,6 +7,25 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'si';
+    src: url('../icons/socicon.eot');
+    src: url('../icons/socicon.eot?#iefix') format('embedded-opentype'),
+         url('../icons/socicon.woff') format('woff'),
+         url('../icons/socicon.ttf') format('truetype'),
+         url('../icons/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(../icons/socicon.svg) format(svg);
+    }
+}*/
+
 * {
 	padding: 0;
 	margin: 0;
@@ -116,10 +135,7 @@ body {
 	font-family: 'Bad Script';
 }
 
-.sb_Menu li > a {
-	/*display: block;*/
-	/*width: 250px;
-	height: 35px;*/	
+.sb_Menu li > a {	
 	color: #fff;
 	font-size: calc(100vh*0.025);
 	padding-top: 25px;
@@ -133,6 +149,86 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.soc {
+    overflow:hidden;
+    margin:0; padding:2px;
+    list-style:none;
+}
+
+.soc li {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+
+.soc li a {
+    font-family:si!important;
+    font-style:normal;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+
+    -o-transition:.1s;
+    -ms-transition:.1s;
+    -moz-transition:.1s;
+    -webkit-transition:.1s;
+    transition:.1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    overflow:hidden;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+    position: relative;
+    z-index: 1;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    border: 1px solid #fff;    
+    margin-right: 5px;
+    color: #fff;
+}
+
+.soc a:hover {
+    z-index: 2;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #ef9985;
+    border: 1px solid #ef9985;
+}
+
+.soc-icon-last{
+    margin:0 !important;
+}
+
+.soc-twitter:before {
+    content:'\e040';
+}
+.soc-facebook:before {
+    content:'\e041';
+}
+.soc-googleplus:before {
+    content:'\e042';
+}
+.soc-instagram:before {
+    content:'\e057';
+}
+.soc-vkontakte:before {
+    content:'\e01a';
 }
 
 /*Content*/
