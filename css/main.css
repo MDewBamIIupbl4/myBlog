@@ -51,8 +51,8 @@ body {
 .menu_button_show {
 	position: fixed;
 	z-index: 1;
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	margin: 0 auto;
 	border: 2px solid #fff;
 	border-radius: 50%;
@@ -69,8 +69,8 @@ body {
 }
 
 .menu_button_show:hover {
-	width: 70px;
-	height: 70px;
+	width: 100px;
+	height: 100px;
 	border: 2px solid #ef9985;
 }
 
@@ -234,11 +234,56 @@ body {
 /*Content*/
 
 .content {
-	width: 70%;
-	min-height: 100vh;
+	width: 72%;
 	float: right;
-	margin-right: 2.5%;
-	background-color: rgba(255, 255, 255, 0.4);
+	margin-right: 1.5%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 30px;
+}
+
+.cnt_unit {
+	min-width: 30%;
+	max-width: 100%;
+	height: auto;
+	flex: 3;	
+	margin: 7px;
+	padding: 15px 15px 0 15px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	font-size: 1.2em;
+}
+
+.cnt_unit .datePostCreate {
+	width: calc(50% - 30px);
+	height: 30px;
+	font-size: 0.8em;
+	float: right;
+	padding: 10px 15px;
+	text-align: right;
+	line-height: 30px; 
+}
+
+.cnt_unit .lnk {
+	width: calc(50% - 30px);
+	height: 30px;
+	margin: 0 auto;
+	float: left;
+	padding: 10px 15px;
+	text-align: left;	
+	line-height: 30px; 
+}
+
+.cnt_unit .lnk > a{
+	color: #f3f3f3;
+}
+
+.cnt_unit .lnk > a:hover{
+	color: #ef9985;
+}
+
+.cnt_unit img {
+	max-width: 100%;
 }
 
 /*Media Query*/
@@ -252,8 +297,8 @@ body {
 			left: 0;
 		}
 		.content {
-			width: 95%;
-			margin-left: 2.5%;
+			width: 97%;
+			margin-left: 1.5%;
 		}
 		.menu_button_show {
 			display: block;
